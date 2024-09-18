@@ -5,7 +5,7 @@ function App() {
   
 
   return (
-    <Router basename="/portfolio-react">
+    <Router basename="/portfolio">
       <Routes>
         <Route path="/" element={
           <>
