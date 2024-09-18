@@ -146,7 +146,7 @@ export default function Homepage() {
             <h1 style={styles.specialText2}>About Me</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, maxHeight: "60vh",padding: "20px", marginTop:"5%" }}
+          style={{ ...styles.containerCard1, maxHeight: "400px",padding: "20px", marginTop:"5%" }}
           initial="hidden"
           
         >
@@ -224,7 +224,7 @@ export default function Homepage() {
 
           
       </section>
-      <section id="education" style={{minHeight: "180vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
+      <section id="education" style={{minHeight: "150vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
           <div style={{paddingTop:"5%", height:"auto", maxHeight:"150px",width:"100%", textAlign:"center"}}>
             <h1 style={styles.specialText3}>Education</h1>
           </div>
@@ -364,7 +364,7 @@ export default function Homepage() {
           
       </section>
 
-      <section id="contact" style={{minHeight: "100vh", backgroundImage: "url('./bg.jpeg')", backgroundSize:"contain",scrollMarginTop: "30px"}} ref={aboutRef}>
+      <section id="contact" style={{height:"100%",maxHeight:"160vh", minHeight: "150vh", backgroundImage: "url('./bg.jpeg')", backgroundSize:"contain",scrollMarginTop: "30px"}} ref={aboutRef}>
       
           <div style={{paddingTop:"5%", height:"80px",width:"100%", textAlign:"center", marginBottom:"5%",}}>
             <h1 style={styles.specialText4}> Contact</h1>
@@ -436,6 +436,18 @@ const styles = {
   },
   containerCard: {
     display:"flex", 
+    justifyContent:"space-evenly",
+    flexWrap: "wrap",
+    marginTop:"6%",
+    height:"100vh",
+    minHeight:"500px",
+    maxHeight:"600px",
+    marginBottom:"5%"
+  },
+
+  containerCard1: {
+    display:"flex", 
+    overflowY:"scroll",
     justifyContent:"space-evenly",
     flexWrap: "wrap",
     marginTop:"6%",
