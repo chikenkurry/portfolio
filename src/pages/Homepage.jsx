@@ -180,7 +180,7 @@ export default function Homepage() {
             <h1 style={styles.specialText}>Working Experience</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "600px", overflowY: "auto", paddingTop:"30px" }}
+          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px" }}
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -224,15 +224,15 @@ export default function Homepage() {
 
           
       </section>
-      <section id="education" style={{minHeight: "150vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
+      <section id="education" style={{minHeight: "200vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
           <div style={{paddingTop:"5%", height:"auto", maxHeight:"150px",width:"100%", textAlign:"center"}}>
             <h1 style={styles.specialText3}>Education</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "400px", overflowY: "auto", paddingTop:"30px" }}
+          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px", marginBottom:"5%" }}
          
         >
-           <div id="expContainer" className="container" style={styles.display}>
+           <div id="expContainer" className="container" style={{...styles.display}}>
             
             <motion.div {...fadeIn} className="card" style={styles.cardContainer} variants={cardVariants} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
                 <img src="./scis.png" style={styles.cardImg}/>
@@ -272,7 +272,7 @@ export default function Homepage() {
             <h1 style={styles.specialText3}>Skills</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "300px", overflowY: "auto", paddingTop:"30px" }}>
+          style={{ ...styles.containerCard, height: "300px" }}>
            <div id="skillsContainer" className="container" style={styles.display}>
             
             <motion.div {...fadeIn} className="card" style={styles.cardSkillContainer} variants={cardVariants} onClick={() => handleCardClick('Frontend development for full-stack projects') }>
@@ -495,7 +495,7 @@ const styles = {
 cardContainer: {
  
     width:"30%",
-    height:"30%",
+    height:"400px",
     minWidth: "300px",
     maxWidth: "350px",
     minHeight:"300px",
