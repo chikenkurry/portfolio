@@ -36,6 +36,28 @@
 .expContainer:hover, › .card:not(:hover) { 
     filter: blur (5px);
 }
+#expContainer {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#expContainer ::-webkit-scrollbar {
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+#expContainer ::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+#expContainer ::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+#expContainer ::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
 
 #skillsContainer {
 

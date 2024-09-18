@@ -229,7 +229,10 @@ export default function Homepage() {
             <h1 style={styles.specialText3}>Education</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px", marginBottom:"5%" }}
+          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px" }}
+          variants={containerVariants}
+          initial="hidden"
+          animate={controls}
          
         >
            <div id="expContainer" className="container" style={{...styles.display}}>
@@ -438,6 +441,7 @@ const styles = {
     flexWrap: "wrap",
     marginTop:"6%",
     height:"100%",
+    minHeight:"400px",
     marginBottom:"5%"
   },
 
@@ -488,6 +492,7 @@ const styles = {
     scrollBarWidth: "none",
     width:"100%",
     height:"100%",
+    minHeight:"400px",
     marginTop:"5%",
   
 },
