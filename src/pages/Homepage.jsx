@@ -360,7 +360,7 @@ export default function Homepage() {
           
       </section>
 
-      <section id="contact" style={{minHeight: "90vh", backgroundImage: "url('./bg.jpeg')", backgroundSize:"contain",scrollMarginTop: "30px"}} ref={aboutRef}>
+      <section id="contact" style={{minHeight: "100vh", backgroundImage: "url('./bg.jpeg')", backgroundSize:"contain",scrollMarginTop: "30px"}} ref={aboutRef}>
         
           <div style={{paddingTop:"5%", height:"80px",width:"100%", textAlign:"center", marginBottom:"5%",}}>
             <h1 style={styles.specialText4}> Contact</h1>
