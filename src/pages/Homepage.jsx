@@ -237,7 +237,7 @@ export default function Homepage() {
         >
            <div id="expContainer" className="container" style={{...styles.display}}>
             
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} variants={cardVariants} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
+            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
                 <img src="./scis.png" style={styles.cardImg}/>
                 <div className="layer" ></div>
                 <div className="info" style={{color:"white"}}>
