@@ -146,7 +146,7 @@ export default function Homepage() {
             <h1 style={styles.specialText2}>About Me</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, maxHeight: "80vh", overflowY: "auto", padding: "20px", marginTop:"15%" }}
+          style={{ ...styles.containerCard, maxHeight: "60vh",padding: "20px", marginTop:"5%" }}
           initial="hidden"
           
         >
@@ -180,7 +180,7 @@ export default function Homepage() {
             <h1 style={styles.specialText}>Working Experience</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px" }}
+          style={{ ...styles.containerCard, height: "500px", paddingTop:"70px" }}
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -224,12 +224,12 @@ export default function Homepage() {
 
           
       </section>
-      <section id="education" style={{minHeight: "200vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
+      <section id="education" style={{minHeight: "180vh", backgroundImage: "url('./bg6.jpeg')", backgroundSize:"cover",scrollMarginTop: "1px"}}>
           <div style={{paddingTop:"5%", height:"auto", maxHeight:"150px",width:"100%", textAlign:"center"}}>
             <h1 style={styles.specialText3}>Education</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "500px", paddingTop:"30px" }}
+          style={{ ...styles.containerCard, height: "400px", paddingTop:"30px" }}
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -237,7 +237,7 @@ export default function Homepage() {
         >
            <div id="expContainer" className="container" style={{...styles.display}}>
             
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
+            <motion.div {...fadeIn} className="card" style={{...styles.cardContainer, width:"200px", height:"200px"}}  onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
                 <img src="./scis.png" style={styles.cardImg}/>
                 <div className="layer" ></div>
                 <div className="info" style={{color:"white"}}>
@@ -248,7 +248,7 @@ export default function Homepage() {
                 </div>
             </motion.div>
 
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick={() => handleCardClick('Subject taken: H2 Chem, H2 Math, H2 Econs, H1 Hist\n Awards: Principal`s Honour for Promos and MYE', './cjc1.jpg')}>
+            <motion.div {...fadeIn} className="card" style={{...styles.cardContainer, width:"200px", height:"200px"}} onClick={() => handleCardClick('Subject taken: H2 Chem, H2 Math, H2 Econs, H1 Hist\n Awards: Principal`s Honour for Promos and MYE', './cjc1.jpg')}>
                 <img src="./CJC.png" style={styles.cardImg}/>
                 <div className="layer"></div>
                 <div className="info" style={{color:"white"}}>
@@ -259,7 +259,7 @@ export default function Homepage() {
                 </div>
             </motion.div>
 
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} >
+            <motion.div {...fadeIn} className="card"style={{...styles.cardContainer, width:"200px", height:"200px"}}  >
                 <img src="./manjuju.png" style={{...styles.cardImg}}/>
                 <div className="layer"></div>
                 <div className="info" style={{color:"white"}}>
@@ -275,8 +275,8 @@ export default function Homepage() {
             <h1 style={styles.specialText3}>Skills</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, height: "300px" }}>
-           <div id="skillsContainer" className="container" style={styles.display}>
+          style={{ ...styles.containerCard }}>
+           <div id="skillsContainer" className="container" style={{...styles.display, height:"300px"}}>
             
             <motion.div {...fadeIn} className="card" style={styles.cardSkillContainer} variants={cardVariants} onClick={() => handleCardClick('Frontend development for full-stack projects') }>
             <img src="./react.png" style={styles.cardImg}/>
@@ -365,12 +365,12 @@ export default function Homepage() {
       </section>
 
       <section id="contact" style={{minHeight: "100vh", backgroundImage: "url('./bg.jpeg')", backgroundSize:"contain",scrollMarginTop: "30px"}} ref={aboutRef}>
-        
+      
           <div style={{paddingTop:"5%", height:"80px",width:"100%", textAlign:"center", marginBottom:"5%",}}>
             <h1 style={styles.specialText4}> Contact</h1>
           </div>
-          <div style={{...styles.containerCard}}>
-            <div  style={{ ...styles.containerCard, width:"50%",minWidth:"300px",overflowY: "auto", marginTop:"100px"}}>
+          <div style={{...styles.containerCard, height:"100vh"}}>
+            <div  style={{ ...styles.containerCard, width:"50%",minWidth:"300px", marginTop:"100px"}}>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -403,7 +403,6 @@ export default function Homepage() {
                 style={{objectFit:"cover",height:"500px", width: "400px", marginTop: "20px", borderRadius: "30px" }}
                 autoPlay
                 loop
-                control
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2 }}
@@ -440,8 +439,9 @@ const styles = {
     justifyContent:"space-evenly",
     flexWrap: "wrap",
     marginTop:"6%",
-    height:"100%",
-    minHeight:"400px",
+    height:"100vh",
+    minHeight:"500px",
+    maxHeight:"600px",
     marginBottom:"5%"
   },
 
@@ -478,7 +478,7 @@ const styles = {
   },
 
   card: {
-    width: "30%", minWidth:"300px",marginBottom:"2%", overflowY: "auto", borderRadius:"30px",textAlign:"center", height:"auto", marginTop:"5%"
+    width: "20%", minWidth:"300px", maxHeight: "600px",marginBottom:"2%", borderRadius:"30px",textAlign:"center", height:"auto", marginTop:"5%"
   },
 
 
@@ -491,9 +491,12 @@ const styles = {
     scrollSnapType: "x mandatory",
     scrollBarWidth: "none",
     width:"100%",
+    maxheight:"500px",
     height:"100%",
-    minHeight:"400px",
-    marginTop:"5%",
+    minHeight:"350px",
+    maxHeight:"500px",
+   
+    
   
 },
 
