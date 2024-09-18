@@ -180,14 +180,14 @@ export default function Homepage() {
             <h1 style={styles.specialText}>Working Experience</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, maxHeight: "80vh", overflowY: "auto", padding: "20px" }}
+          style={{ ...styles.containerCard, height: "600px", overflowY: "auto", paddingTop:"30px" }}
           variants={containerVariants}
           initial="hidden"
           animate={controls}
         >
            <div id="expContainer" className="container" style={styles.display}>
             
-            <motion.div className="card" style={styles.cardContainer}  onClick={() => handleCardClick('As a retail associate at Nike, I provided top-tier customer service, assisting customers with product selection, offering personalized recommendations, and ensuring an exceptional in-store experience. I was responsible for maintaining an organized and visually appealing sales floor, handling transactions efficiently, and staying up-to-date with product knowledge to promote the latest merchandise. My role also included contributing to sales targets, managing stock, and fostering a positive, team-oriented environment to enhance customer satisfaction and loyalty.', 'src/assets/nike2.jpg')}>
+            <motion.div className="card" style={styles.cardContainer}  onClick={() => handleCardClick('As a retail associate at Nike, I provided top-tier customer service, assisting customers with product selection, offering personalized recommendations, and ensuring an exceptional in-store experience. I was responsible for maintaining an organized and visually appealing sales floor, handling transactions efficiently, and staying up-to-date with product knowledge to promote the latest merchandise. My role also included contributing to sales targets, managing stock, and fostering a positive, team-oriented environment to enhance customer satisfaction and loyalty.', './nike2.jpg')}>
                 <img src="./nike.jpeg" style={styles.cardImg}/>
                 <div className="layer" ></div>
                 <div className="info" style={{color:"white"}}>
@@ -198,7 +198,7 @@ export default function Homepage() {
                 </div>
             </motion.div>
 
-            <motion.div className="card" style={styles.cardContainer} onClick={() => handleCardClick('During the Artbox 2023 expo exhibition, I worked as a salesperson for Oatbedient, where I quickly adapted to the fast-paced environment and effectively engaged with visitors. My ability to grasp new information swiftly allowed me to confidently present our products and address customer inquiries. This not only enhanced the company’s visibility at the event but also earned me positive feedback from my manager, who appreciated my enthusiasm and quick learning ability. My performance contributed to a successful exhibition, showcasing my aptitude for sales and client interaction.', 'src/assets/oat2.PNG')}>
+            <motion.div className="card" style={styles.cardContainer} onClick={() => handleCardClick('During the Artbox 2023 expo exhibition, I worked as a salesperson for Oatbedient, where I quickly adapted to the fast-paced environment and effectively engaged with visitors. My ability to grasp new information swiftly allowed me to confidently present our products and address customer inquiries. This not only enhanced the company’s visibility at the event but also earned me positive feedback from my manager, who appreciated my enthusiasm and quick learning ability. My performance contributed to a successful exhibition, showcasing my aptitude for sales and client interaction.', './oat2.PNG')}>
                 <img src="./oatbedient.JPG" style={styles.cardImg}/>
                 <div className="layer"></div>
                 <div className="info" style={{color:"white"}}>
@@ -209,7 +209,7 @@ export default function Homepage() {
                 </div>
             </motion.div>
 
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick= {() => handleCardClick('Led a platoon of 15 in executing various high-stakes missions, including the National Day Parade (NDP). Additionally, played a key role in managing the networking infrastructure, ensuring seamless connectivity between critical equipment, such as establishing and maintaining reliable connections between cameras and the server.', 'src/assets/army2.jpg')}>
+            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick= {() => handleCardClick('Led a platoon of 15 in executing various high-stakes missions, including the National Day Parade (NDP). Additionally, played a key role in managing the networking infrastructure, ensuring seamless connectivity between critical equipment, such as establishing and maintaining reliable connections between cameras and the server.', './army2.jpg')}>
                 <img src="./army.jpeg" style={{...styles.cardImg, minHeight:"400px"}}/>
                 <div className="layer"></div>
                 <div className="info" style={{color:"white"}}>
@@ -229,12 +229,12 @@ export default function Homepage() {
             <h1 style={styles.specialText3}>Education</h1>
           </div>
           <motion.div
-          style={{ ...styles.containerCard, maxHeight: "80vh", overflowY: "auto", padding: "20px" }}
+          style={{ ...styles.containerCard, height: "400px", overflowY: "auto", paddingTop:"30px" }}
          
         >
            <div id="expContainer" className="container" style={styles.display}>
             
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} variants={cardVariants} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', 'src/assets/scis1.JPG')}>
+            <motion.div {...fadeIn} className="card" style={styles.cardContainer} variants={cardVariants} onClick={() => handleCardClick('Clubs and Societies: Member of EYE Investment and SMU Paw club. \n ', './scis1.JPG')}>
                 <img src="./scis.png" style={styles.cardImg}/>
                 <div className="layer" ></div>
                 <div className="info" style={{color:"white"}}>
@@ -245,7 +245,7 @@ export default function Homepage() {
                 </div>
             </motion.div>
 
-            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick={() => handleCardClick('Subject taken: H2 Chem, H2 Math, H2 Econs, H1 Hist\n Awards: Principal`s Honour for Promos and MYE', 'src/assets/cjc1.jpg')}>
+            <motion.div {...fadeIn} className="card" style={styles.cardContainer} onClick={() => handleCardClick('Subject taken: H2 Chem, H2 Math, H2 Econs, H1 Hist\n Awards: Principal`s Honour for Promos and MYE', './cjc1.jpg')}>
                 <img src="./CJC.png" style={styles.cardImg}/>
                 <div className="layer"></div>
                 <div className="info" style={{color:"white"}}>
@@ -276,6 +276,7 @@ export default function Homepage() {
            <div id="skillsContainer" className="container" style={styles.display}>
             
             <motion.div {...fadeIn} className="card" style={styles.cardSkillContainer} variants={cardVariants} onClick={() => handleCardClick('Frontend development for full-stack projects') }>
+            <img src="./react.png" style={styles.cardImg}/>
                 <div className="layer" ></div>
                 <div className="info" style={{color:"white"}}> 
                     <h5 className="year">React</h5>
@@ -473,7 +474,7 @@ const styles = {
   },
 
   card: {
-    width: "400px",marginBottom:"2%", overflowY: "auto", borderRadius:"30px",textAlign:"center", height:"auto"
+    width: "30%", minWidth:"300px",marginBottom:"2%", overflowY: "auto", borderRadius:"30px",textAlign:"center", height:"auto", marginTop:"5%"
   },
 
 
@@ -486,7 +487,8 @@ const styles = {
     scrollSnapType: "x mandatory",
     scrollBarWidth: "none",
     width:"100%",
-    height:"100%"
+    height:"100%",
+    marginTop:"5%",
   
 },
 
